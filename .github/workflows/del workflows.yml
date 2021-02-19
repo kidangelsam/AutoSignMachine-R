@@ -5,11 +5,14 @@ on:
       days: #要保留的天数
         description: 'Number of days.'
         required: true
-        default: 2
+        default: 1
       runs: #要为每个yml保留的个数
         description: 'Number of runs.'
         required: true
         default: 6
+     
+    schedule:
+        - cron: '10 0 * * *'
 
 jobs:
   del_runs:
